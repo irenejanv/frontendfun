@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+html {
+  background-color: #d0ecf0;
+  padding: 3%;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+}
+
+h1 {
+  font-size: 80px;
+  color: #e32bff;
+  text-align: center;
+}
+
+p {
+  font-size: 25px;
+  text-align: center;
+}
+
+.sticky {
+  background-color: #d0ecf0;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+
+.bean_key {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.week_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1%;
+  row-gap: 3%;
+}
+
+.day_image {
+  max-width: 100%;
+  max-height: auto;
+}
+
+h2 {
+  color: #e32bff;
+  margin: auto;
+  padding-left: 6%;
+}
+
+@media (max-width: 1000px) {
+  .bean_key {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .week_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1%;
+  }
+}
+
+@media (max-width: 700px) {
+  .bean_key {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .week_grid {
+    grid-template-columns: 1fr;
+    row-gap: 1%;
+  }
+  .day_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    color: #e32bff;
+    margin: auto;
+    text-align: center;
+    padding-right: 3%;
+  }
+}
