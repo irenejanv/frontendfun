@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Downloads/irene"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "frontendfun"
+	}
+}
