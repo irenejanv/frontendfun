@@ -161,3 +161,8 @@ img {
 .piechart_title {
   font-size: 19px;
 }
+
+/* CODE For Annual Income graphic  */
+.annual_income {
+  fill: #6bcfc5;
+}

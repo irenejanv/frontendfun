@@ -28,7 +28,7 @@ function piechart() {
       .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
 
     // set the color scale
-    var color = d3.scaleOrdinal().domain(data).range(['purple', 'green']);
+    var color = d3.scaleOrdinal().domain(data).range(['#6bcfc5', '#ded192']);
 
     // Compute the position of each group on the pie:
     var pie = d3.pie().value(function (d) {
