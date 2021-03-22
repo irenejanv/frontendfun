@@ -1,4 +1,4 @@
-function annualincome() {
+function annualIncome() {
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 30, bottom: 40, left: 130},
     width = 450 - margin.left - margin.right,
@@ -76,6 +76,7 @@ function annualincome() {
       })
       .attr('text-achor', 'middle');
   });
+  console.log('everything');
 }
 
-annualincome();
+annualIncome();
