@@ -27,6 +27,8 @@ function treechart() {
       // Name of the parent (column name is parent in csv)
       data
     );
+    console.log(root);
+
     root.sum(function (d) {
       return +d.value;
     }); // Compute the numeric value for each entity
@@ -76,3 +78,4 @@ function treechart() {
       .attr('fill', 'white');
   });
 }
+treechart();
