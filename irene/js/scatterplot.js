@@ -91,3 +91,4 @@ function income_degrees() {
       .on('mouseleave', mouseleave);
   });
 }
+income_degrees();
