@@ -3,27 +3,60 @@
   <head>
     <meta charset="utf-8" />
     <title>D3 Page Template</title>
+
     <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <style type="text/css">
+		
+			div.bar {
+				display: inline-block;
+				width: 20px;
+				height: 75px;
+				background-color: teal;
+			}
   </head>
   <body>
     <script type="text/javascript">
-      d3.select('body').append('p').text('New paragraph!');
-      d3.csv('food.csv', function (data) {
-        console.log(data);
+      var dataset = [5, 10, 15, 20, 25];
 
-        let rowConverter = function (d) {
-          // create variable and name it
-          return {
-            //tell variable what to do
-            Food: d.Food, //No conversion
-            Deliciousness: parseFloat(d.Deliciousness),
-          };
-        };
-
-        d3.csv('food.csv', rowConverter, function (data) {
-          console.log(data); //call variable function in the console
+      d3.select('body')
+        .selectAll('p')
+        .data(dataset)
+        .enter()
+        .append('p')
+        .text(function (d) {
+          return 'I can count up to ' + d;
+        })
+        .style('color', function (d) {
+          if (d > 15) {
+            return 'red';
+          } else {
+            return 'black';
+          }
         });
-      });
+
+      // d3.select('body').append('p').text('New paragraph!');
+
+      // var dataset; //declare global variable, initially empty undefined
+      // d3.csv('food.csv', function (data) {
+      //   console.log(data);
+      //   dataset = data; //once loaded, copy to dataset
+      //   generateVis(); //then call other functions
+      //   hideLoadingMsg(); ///that depend on data being present
+
+      //   var rowConverter = function (d) {
+      //     // create variable and name it
+      //     return {
+      //       //tell variable what to do
+      //       Food: d.Food, //No conversion
+      //       Deliciousness: parseFloat(d.Deliciousness),
+      //     };
+      //   };
+
+      //   d3.csv('food.csv', rowConverter, function (data) {
+      //     console.log(data); //call variable function in the console
+      //   });
+      // });
     </script>
   </body>
 </html>
