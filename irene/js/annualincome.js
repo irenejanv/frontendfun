@@ -16,7 +16,7 @@ function annualIncome() {
   // Parse the Data
   d3.csv('./data/income.csv', function (data) {
     // Add X axis
-    var x = d3.scaleLinear().domain([0, 78]).range([0, width]);
+    var x = d3.scaleLinear().domain([0, 100]).range([0, width]);
     // svg
     //   .append('g')
     //   .attr('transform', 'translate(0,' + height + ')')
@@ -74,7 +74,7 @@ function annualIncome() {
       .text(function (d) {
         return d.Value;
       })
-      .attr('text-achor', 'middle');
+      .attr('text-anchor', 'middle');
   });
   console.log('everything');
 }

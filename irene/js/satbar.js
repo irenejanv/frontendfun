@@ -64,7 +64,7 @@ function satbar() {
       .attr('class', 'sat_bar_text')
       .attr('x', function (d) {
         // Get the right corner for the rectangle and move it in 50 pixels
-        return x(d.Value) - 50;
+        return x(d.Value) - 30;
       })
       .attr('y', function (d) {
         // Start off at the top line of the bar. Move it halfway so the bottom part of the text is at the halfway mark. Then add a little to make the text centered.
@@ -74,7 +74,7 @@ function satbar() {
       .text(function (d) {
         return d.Value;
       })
-      .attr('text-achor', 'middle');
+      .attr('text-anchor', 'middle');
   });
 }
 
