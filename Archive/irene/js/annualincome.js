@@ -37,41 +37,34 @@ function annualIncome() {
       .padding(0.1);
     const yAxis = svg
       .append('g')
-      .attr('class', 'bar_y_axis')
+      .attr('class', 'sat_bar_y_axis')
       .call(d3.axisLeft(y));
 
-    const yAxisText = yAxis.selectAll('text').attr('class', 'bar_y_axis_text');
+    const yAxisText = yAxis
+      .selectAll('text')
+      .attr('class', 'sat_bar_y_axis_text');
     //Bars
     const bars = svg.selectAll('annual_income').data(data).enter();
 
     bars
       .append('rect')
-      .attr('class', 'bar annual_income')
+      .attr('class', 'annual_income')
       .attr('x', x(0))
       .attr('y', function (d) {
         return y(d.Race);
       })
       .attr('width', function (d) {
-        return x(d.Value);
+        return x(d.Income);
       })
-      .attr('height', y.bandwidth())
-      .attr('fill', function (d) {
-        console.log(d);
-        let color;
-        if (d.Race === 'Asian American') {
-          color = '#f9423a';
-        } else {
-          color = '#6bcfc5';
-        }
-        return color;
-      });
+      .attr('height', y.bandwidth());
+    //if race is asian american then do this
 
     bars
       .append('text')
-      .attr('class', 'bar_text')
+      .attr('class', 'sat_bar_text')
       .attr('x', function (d) {
         // Get the right corner for the rectangle and move it in 50 pixels
-        return x(d.Value) - 20;
+        return x(d.Income) - 50;
       })
       .attr('y', function (d) {
         // Start off at the top line of the bar. Move it halfway so the bottom part of the text is at the halfway mark. Then add a little to make the text centered.
@@ -79,10 +72,11 @@ function annualIncome() {
       })
       .attr('fill', '#000')
       .text(function (d) {
-        return d.Value;
+        return d.Income;
       })
       .attr('text-anchor', 'middle');
   });
+  console.log('everything');
 }
 
 annualIncome();

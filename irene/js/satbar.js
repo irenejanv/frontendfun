@@ -37,18 +37,16 @@ function satbar() {
       .padding(0.1);
     const yAxis = svg
       .append('g')
-      .attr('class', 'sat_bar_y_axis')
+      .attr('class', 'bar_y_axis')
       .call(d3.axisLeft(y));
 
-    const yAxisText = yAxis
-      .selectAll('text')
-      .attr('class', 'sat_bar_y_axis_text');
+    const yAxisText = yAxis.selectAll('text').attr('class', 'bar_y_axis_text');
     //Bars
-    const bars = svg.selectAll('sat_bar').data(data).enter();
+    const bars = svg.selectAll('bar').data(data).enter();
 
     bars
       .append('rect')
-      .attr('class', 'sat_bar')
+      .attr('class', 'bar sat')
       .attr('x', x(0))
       .attr('y', function (d) {
         return y(d.Race);
@@ -57,11 +55,20 @@ function satbar() {
         return x(d.Value);
       })
       .attr('height', y.bandwidth())
-      .attr('fill', 'cornflowerblue');
+      .attr('fill', function (d) {
+        console.log(d);
+        let color;
+        if (d.Race === 'Asian American') {
+          color = '#f9423a';
+        } else {
+          color = '#6bcfc5';
+        }
+        return color;
+      });
 
     bars
       .append('text')
-      .attr('class', 'sat_bar_text')
+      .attr('class', 'bar_text')
       .attr('x', function (d) {
         // Get the right corner for the rectangle and move it in 50 pixels
         return x(d.Value) - 30;

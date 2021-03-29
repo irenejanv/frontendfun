@@ -2,7 +2,6 @@
 <head>
   <title>Income Scatterplot</title>
   <meta charset="utf-8" />
-  <style></style>
 </head>
 
 <body>
@@ -14,8 +13,8 @@
   <script>
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
-      width = 800 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom;
+      width = 460 - margin.left - margin.right,
+      height = 450 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3
@@ -26,13 +25,6 @@
       .append('g')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-    svg
-      .append('rect')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', width)
-      .attr('height', height)
-      .attr('fill', 'goldenrod');
     //Read the data
     d3.csv('./income.csv', function (data) {
       // Add X axis
@@ -43,8 +35,12 @@
         .call(d3.axisBottom(x));
 
       // Add Y axis
-      var y = d3.scaleLinear().domain([0, 110]).range([height, 0]).nice();
-      svg.append('g').call(d3.axisLeft(y));
+      var y = d3
+      .scaleLinear()
+      .domain([0, 100])
+      .range([height, 0]);
+      svg.append('g')
+      .call(d3.axisLeft(y));
 
       // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
       // Its opacity is set to 0: we don't see it by default.
@@ -86,9 +82,15 @@
       };
 
       // Add dots
-      const dots = svg.append('g').selectAll('dot').data(data).enter();
-
-      dots
+      svg
+        .append('g')
+        .selectAll('dot')
+        .data(
+          data.filter(function (d, i) {
+            return i < 50;
+          })
+        ) // the .filter part is just to keep a few dots on the chart, not all of them
+        .enter()
         .append('circle')
         .attr('cx', function (d) {
           return x(d.PercentDegree);
@@ -104,18 +106,6 @@
         .on('mousemove', mousemove)
         .on('mouseleave', mouseleave);
 
-      dots
-        .append('text')
-        .attr('x', function (d) {
-          return x(d.PercentDegree);
-        })
-        .attr('y', function (d) {
-          return y(d.Income) - 10;
-        })
-        .text(function (d) {
-          return d.PercentDegree + '%, ' + d.Income + 'K';
-        })
-        .attr('text-anchor', 'middle');
       // svg
       //   .selectAll('circle')
       //   .data(dataset)

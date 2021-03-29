@@ -1,4 +1,4 @@
-function annualIncome() {
+function satbar() {
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 30, bottom: 40, left: 130},
     width = 450 - margin.left - margin.right,
@@ -6,7 +6,7 @@ function annualIncome() {
 
   // append the svg object to the body of the page
   var svg = d3
-    .select('#annual_income')
+    .select('#sat_scores')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
@@ -14,9 +14,9 @@ function annualIncome() {
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
   // Parse the Data
-  d3.csv('./data/income.csv', function (data) {
+  d3.csv('./data/SAT.csv', function (data) {
     // Add X axis
-    var x = d3.scaleLinear().domain([0, 100]).range([0, width]);
+    var x = d3.scaleLinear().domain([0, 2400]).range([0, width]);
     // svg
     //   .append('g')
     //   .attr('transform', 'translate(0,' + height + ')')
@@ -37,16 +37,18 @@ function annualIncome() {
       .padding(0.1);
     const yAxis = svg
       .append('g')
-      .attr('class', 'bar_y_axis')
+      .attr('class', 'sat_bar_y_axis')
       .call(d3.axisLeft(y));
 
-    const yAxisText = yAxis.selectAll('text').attr('class', 'bar_y_axis_text');
+    const yAxisText = yAxis
+      .selectAll('text')
+      .attr('class', 'sat_bar_y_axis_text');
     //Bars
-    const bars = svg.selectAll('annual_income').data(data).enter();
+    const bars = svg.selectAll('sat_bar').data(data).enter();
 
     bars
       .append('rect')
-      .attr('class', 'bar annual_income')
+      .attr('class', 'sat_bar')
       .attr('x', x(0))
       .attr('y', function (d) {
         return y(d.Race);
@@ -55,23 +57,14 @@ function annualIncome() {
         return x(d.Value);
       })
       .attr('height', y.bandwidth())
-      .attr('fill', function (d) {
-        console.log(d);
-        let color;
-        if (d.Race === 'Asian American') {
-          color = '#f9423a';
-        } else {
-          color = '#6bcfc5';
-        }
-        return color;
-      });
+      .attr('fill', 'cornflowerblue');
 
     bars
       .append('text')
-      .attr('class', 'bar_text')
+      .attr('class', 'sat_bar_text')
       .attr('x', function (d) {
         // Get the right corner for the rectangle and move it in 50 pixels
-        return x(d.Value) - 20;
+        return x(d.Value) - 30;
       })
       .attr('y', function (d) {
         // Start off at the top line of the bar. Move it halfway so the bottom part of the text is at the halfway mark. Then add a little to make the text centered.
@@ -85,4 +78,4 @@ function annualIncome() {
   });
 }
 
-annualIncome();
+satbar();
