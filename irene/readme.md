@@ -5,10 +5,10 @@
 Things to do asap
 
 1. Treechart: aka treemap is not connecting on main index.html (there is a blank space but nothing shows up) so I made a "Treechart Trial" folder to just try the chart by itself and it seems like the thing that is impacting the connection is my data.
-2. Scatterplot Next Steps:
-   ~~a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.~~
-   b. Create functions so that only some of the labels show up on the bubbbles, not all.  
-   c. Edit tool tip so that it looks better and includes ethnicity.
+2. Scatterplot Next Steps: <br>
+   ~~a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.~~ <br>
+   b. Create functions so that only some of the labels show up on the bubbbles, not all.<br>
+   c. Edit tool tip so that it looks better and includes ethnicity.<br>
    d. Create function so that only some of the circles are different colors.
    e. Edit tick marks by finding class of tick marks and make them white. Extend them so that they go through the whole chart. Only include some of the tick marks, not all. Change background color of SVG to light yellow. on it's own page, everything works and data connects. I want to know how to add annotations right on the bubbles vs. the hover state. And also to style like where the bubbles are different colors like on my original chart.
    d. Connect scatterplot to index.html.
