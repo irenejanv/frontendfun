@@ -6,7 +6,7 @@ Things to do asap
 
 1. Treechart: aka treemap is not connecting on main index.html (there is a blank space but nothing shows up) so I made a "Treechart Trial" folder to just try the chart by itself and it seems like the thing that is impacting the connection is my data.
 2. Scatterplot Next Steps:
-   a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.
+   ~~a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.~~
    b. Create functions so that only some of the labels show up on the bubbbles, not all.  
    c. Edit tool tip so that it looks better and includes ethnicity.
    d. Create function so that only some of the circles are different colors.

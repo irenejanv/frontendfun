@@ -1,19 +1,19 @@
-PercentDegree,Income
-72,100
-60,72
-59,37
-55,60
-53,70
-54,77
-49,74
-46,80
-41,44
-32,56
-29,60
-18,54
-17,48
-16,53
-9,35
-33,63
-23,36
-16,45
+Ethnicity,PercentDegree,Income
+Indian ,72,100
+Maylasian ,60,72
+Mongolian ,59,37
+Korean ,55,60
+Chinese ,53,70
+Asian Average ,54,77
+Japanese ,49,74
+Filipinos ,46,80
+Nepali ,41,44
+U.S. Average ,32,56
+Vietnamese ,29,60
+Cambodian ,18,54
+Hmong ,17,48
+Laotian ,16,53
+Bhutanese ,9,35
+White ,33,63
+Black ,23,36
+Hispanic ,16,45
