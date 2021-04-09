@@ -53,8 +53,9 @@
         .append('div')
         .style('opacity', 20)
         .attr('class', 'tooltip')
-        .style('background-color', 'white')
-        .style('border', 'solid')
+        .style('background-color', 'cornflower blue')
+        // why does this not change the color
+        .style('border', 'none')
         .style('border-width', '1px')
         .style('border-radius', '5px')
         .style('padding', '10px');
@@ -68,13 +69,14 @@
       var mousemove = function (d) {
         tooltip
           .html(
-            // 'The percent with a Bachelor Degree is: ' +
-            d.PercentDegree +
+            d.Ethnicity +
+              '<br> ' +
+              ' Bachelor Degree: ' +
+              d.PercentDegree +
               '%' +
-              ' of this ethnic group has a Bachelor Degree ' +
-              '<br> and the average annual household income is ' +
+              '<br> Average Household Income: ' +
               d.Income +
-              'K'
+              'k a year'
           )
           .style('left', d3.mouse(this)[0] + 90 + 'px') // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
           .style('top', d3.mouse(this)[1] + 'px');
@@ -86,6 +88,7 @@
       };
 
       // Add dots
+
       const dots = svg.append('g').selectAll('dot').data(data).enter();
 
       dots
@@ -115,7 +118,9 @@
         .text(function (d) {
           return d.Ethnicity + d.PercentDegree + '%, ' + d.Income + 'K';
         })
+
         .attr('text-anchor', 'middle');
+
       // svg
       //   .selectAll('circle')
       //   .data(dataset)
