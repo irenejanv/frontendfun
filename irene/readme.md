@@ -4,7 +4,9 @@
 
 Things to do asap
 
-~~1. Treechart: aka treemap is not connecting on main index.html (there is a blank space but nothing shows up) so I made a "Treechart Trial" folder to just try the chart by itself and it seems like the thing that is impacting the connection is my data.~~ <br> 2. Scatterplot Next Steps: <br>
+~~1. Treechart: aka treemap is not connecting on main index.html (there is a blank space but nothing shows up) so I made a "Treechart Trial" folder to just try the chart by itself and it seems like the thing that is impacting the connection is my data.~~ <br>
+a. adjust labels so that the reader can see them <br>
+b. make map squares different colors using color function from the bars.js <br> 2. Scatterplot Next Steps: <br>
 ~~a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.~~ <br>
 b. Create functions so that only some of the labels show up on the dots, not all. Use function from barchart.js where AA bar is red to create a function for the text above the dots.<br>
 ~~Edit tool tip so that it includes ethnicity.~~ <br>
