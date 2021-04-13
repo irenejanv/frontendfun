@@ -56,7 +56,7 @@ function treechart() {
       .attr('height', function (d) {
         return d.y1 - d.y0;
       })
-      .style('stroke', 'black')
+      .style('stroke', 'transparent')
       .style('fill', '#69b3a2');
 
     // and to add the text labels
@@ -72,7 +72,7 @@ function treechart() {
         return d.y0 + 20;
       }) // +20 to adjust position (lower)
       .text(function (d) {
-        return d.data.name;
+        return d.data.name + ' ' + d.data.value + '%';
       })
       .attr('font-size', '15px')
       .attr('fill', 'white');
