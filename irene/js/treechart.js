@@ -59,6 +59,35 @@ function treechart() {
       .style('stroke', 'transparent')
       .style('fill', '#69b3a2');
 
+    //trying out formulas to color map --> this is what is used in BarChart
+    // .attr('fill', function (d) {
+    //   let color;
+    //   if (d.Name === 'Chinese') {
+    //     color = '#f9423a';
+    //   } else {
+    //     color = '#6bcfc5';
+    //   }
+    //   return color;
+    //
+    //Trying out another formula --> this is makes color a variable from this website: https://bl.ocks.org/amo6002/921e5933211ee996cd49420b21afca2c
+
+    // var color;
+    // var color_accessor;
+    // if (color_measure != null) {
+    //   color = d3
+    //     .scaleLinear()
+    //     .range(color_range || ['#ffb300', '#ADD8E6', '#03A9F4'])
+    //     .domain(colorDomain());
+    //   color_accessor = function (d) {
+    //     return color(d.color_metric);
+    //   };
+    // } else {
+    //   color = d3.scaleOrdinal().range(color_range || d3.schemeCategory20c);
+    //   color_accessor = function (d) {
+    //     return color(d.data.key);
+    //   };
+    // }
+
     // and to add the text labels
     svg
       .selectAll('text')
