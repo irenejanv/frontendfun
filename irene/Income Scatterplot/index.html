@@ -2,7 +2,14 @@
 <head>
   <title>Income Scatterplot</title>
   <meta charset="utf-8" />
-  <style></style>
+  <style>
+    #my_dataviz {
+      position: relative;
+    }
+    .tooltip {
+      position: absolute;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,25 +66,29 @@
       var tooltip = d3
         .select('#my_dataviz')
         .append('div')
-        .style('opacity', 20)
+        .style('opacity', 0)
         .attr('class', 'tooltip')
-        .style('background-color', 'cornflower blue')
+        .style('background-color', '#69b3a2')
         // why does this not change the color
         .style('border', 'none')
         .style('border-width', '1px')
         .style('border-radius', '5px')
-        .style('padding', '10px');
+        .style('padding', '10px')
+        .style('font-family', 'sans-serif')
+        .style('font-size', '12px')
+        .style('color', 'white');
 
       // A function that change this tooltip when the user hover a point.
       // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
       var mouseover = function (d) {
-        tooltip.style('opacity', 1);
+        tooltip.style('opacity', 0.9);
       };
 
       var mousemove = function (d) {
         tooltip
           .html(
             d.Ethnicity +
+              //'<span class="tooltip_ethnicity">' + d.Ethnicity to edit individual words and make them bold etc.
               '<br> ' +
               ' Bachelor Degree: ' +
               d.PercentDegree +
@@ -110,11 +121,15 @@
         .attr('r', 7)
 
         //try to change color of some dots
-        // .attr('fill', function(d) {
-        //   let color;
-        //   if d.Ethnicity === 'White' {color = '#e24935';} else {color = '#69b3a2';}
-        //   return color;
-        // })
+        .attr('fill', function (d) {
+          let color;
+          if (d.Ethnicity === 'White' || d.Ethnicity === 'Black') {
+            color = '#e24935';
+          } else {
+            color = '#69b3a2';
+          }
+          return color;
+        })
 
         // .style('fill', '#69b3a2')
         .style('opacity', 0.3)
@@ -132,12 +147,21 @@
           return y(d.Income) - 10;
         })
         .text(function (d) {
-          return d.Ethnicity + d.PercentDegree + '%, ' + d.Income + 'K';
+          if (d.Ethnicity === 'White' || d.Ethnicity === 'Black') {
+            return d.Ethnicity + ' ' + d.PercentDegree + '%, ' + d.Income + 'K';
+          }
+          if (d.Ethnicity === 'Bhutanese') {
+            return d.Ethnicity + ' ' + d.PercentDegree + '%, ' + d.Income + 'K';
+          } else {
+            return '';
+          }
+          //
         })
 
-        .attr('text-anchor', 'middle');
-
-      // USE CODE FROM  SAURABH'S PORTION OF CLASS
+        .attr('text-anchor', 'middle')
+        .attr('font-family', 'sans-serif')
+        .style('font-size', '12px')
+        .style('color', 'red');
     });
   </script>
 </body>
