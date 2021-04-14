@@ -37,6 +37,7 @@
     d3.csv('./income.csv', function (data) {
       // Add X axis
       var x = d3.scaleLinear().domain([0, 80]).range([0, width]);
+
       svg
         .append('g')
         .attr('transform', 'translate(0,' + height + ')')
@@ -44,7 +45,11 @@
 
       // Add Y axis
       var y = d3.scaleLinear().domain([0, 110]).range([height, 0]).nice();
+
       svg.append('g').call(d3.axisLeft(y));
+
+      svg.selectAll('line').attr('stroke', 'red');
+      svg.selectAll('path.domain').attr('stroke', 'red');
 
       // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
       // Its opacity is set to 0: we don't see it by default.
@@ -119,8 +124,9 @@
           return d.Ethnicity + d.PercentDegree + '%, ' + d.Income + 'K';
         })
 
-
         .attr('text-anchor', 'middle');
+
+      // USE CODE FROM  SAURABH'S PORTION OF CLASS
 
       // svg
       //   .selectAll('circle')

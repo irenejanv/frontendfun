@@ -8,7 +8,7 @@ Things to do asap
 a. adjust labels so that the reader can see them <br>
 b. make map squares different colors using color function from the bars.js <br> 2. Scatterplot Next Steps: <br>
 ~~a. Add "ethnicity" groups to data. Add "ethnicity" to label line so that it shows up as a label.~~ <br>
-b. Create functions so that only some of the labels show up on the dots, not all. Use function from barchart.js where AA bar is red to create a function for the text above the dots.<br>
+b. Create functions so that only some of the labels show up on the dots, not all. Use function from barchart.js where AA bar is red to create a function for the text above the dots. Try using the code from class 4/13 Saurabh's project<br>
 ~~Edit tool tip so that it includes ethnicity.~~ <br>
 c. Edit tool tip so that border is removed and background color is light teal color. --> could not do this directly on the js file for some reason--> line 57 on index.html in income scatterplot folder<br>
 d. Create function so that only some of the circles are different colors.<br>

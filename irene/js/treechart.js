@@ -1,8 +1,8 @@
 function treechart() {
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
-    width = 815 - margin.left - margin.right,
-    height = 545 - margin.top - margin.bottom;
+    width = 1015 - margin.left - margin.right,
+    height = 645 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3
@@ -28,6 +28,51 @@ function treechart() {
       data
     );
     console.log(root);
+
+    const colorScale = d3
+      .scaleOrdinal()
+      .domain([
+        'Chinese',
+        'Indian',
+        'Filipino',
+        'Vietnamese',
+        'Korean',
+        'Japanese',
+        'Cambodian',
+        'Pakistani',
+        'Thai',
+        'Bangladeshi',
+        'Bhutanese',
+        'Burmese',
+        'Hmong',
+        'Indonesian',
+        'Laotian',
+        'Malaysian',
+        'Mongolian',
+        'Nepalese',
+        'Sri Lankan',
+      ])
+      .range([
+        '#00464a',
+        '#005b5f',
+        '#00757b',
+        '#00959c',
+        '#00959c',
+        '#00959c',
+        '#c6a34f',
+        '#ae9145',
+        '#dab658',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+        '#ddbd68',
+      ]);
 
     root.sum(function (d) {
       return +d.value;
@@ -57,9 +102,16 @@ function treechart() {
         return d.y1 - d.y0;
       })
       .style('stroke', 'transparent')
-      .style('fill', '#69b3a2');
+      .style('fill', '#69b3a2')
 
-    //trying out formulas to color map --> this is what is used in BarChart
+      .style('stroke', 'transparent')
+      .style('fill', function (d) {
+        // console.log(d.data.name);
+        return colorScale(d.data.name);
+      });
+
+    //TODO trying out formulas to color map --> this is what is used in BarChart
+    // rect ????
     // .attr('fill', function (d) {
     //   let color;
     //   if (d.Name === 'Chinese') {
@@ -68,7 +120,7 @@ function treechart() {
     //     color = '#6bcfc5';
     //   }
     //   return color;
-    //
+    // //
     //Trying out another formula --> this is makes color a variable from this website: https://bl.ocks.org/amo6002/921e5933211ee996cd49420b21afca2c
 
     // var color;
