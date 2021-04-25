@@ -59,7 +59,7 @@ function annualIncome() {
         console.log(d);
         let color;
         if (d.Race === 'Asian American') {
-          color = '#f9423a';
+          color = '#00959c';
         } else {
           color = '#6bcfc5';
         }
