@@ -52,12 +52,13 @@ p {
 
 .grid_contain_multiples {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   column-gap: 5%;
 }
 .multiples {
   background-color: #f6f0e0;
+  padding: 2%;
   /* height: 200px; */
 }
 
@@ -153,15 +154,13 @@ img {
 /* CODE For PIE CHART graphic  */
 .piechart_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
 .piechart_title {
   font-size: 19px;
 }
-
 
 /* code for scatterplot graphic */
 #income_degrees {
