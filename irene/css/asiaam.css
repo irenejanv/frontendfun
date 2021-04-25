@@ -162,6 +162,15 @@ img {
   font-size: 19px;
 }
 
+
+/* code for scatterplot graphic */
+#income_degrees {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+}
+
 /* CODE For Annual Income graphic  */
 /* .annual_income {
   fill: #6bcfc5;

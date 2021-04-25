@@ -61,6 +61,8 @@
       svg.selectAll('line').attr('stroke', 'white');
       svg.selectAll('path.domain').attr('stroke', 'white');
 
+      // get rid of extra 0 on y axis <text fill="#000" x="-3" dy="0.32em">0</text>
+
       // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
       // Its opacity is set to 0: we don't see it by default.
       var tooltip = d3
@@ -123,7 +125,12 @@
         //try to change color of some dots
         .attr('fill', function (d) {
           let color;
-          if (d.Ethnicity === 'White' || d.Ethnicity === 'Black') {
+          if (
+            d.Ethnicity === 'White' ||
+            d.Ethnicity === 'Black' ||
+            d.Ethnicity === 'Asian Average' ||
+            d.Ethnicity === 'U.S. Average'
+          ) {
             color = '#e24935';
           } else {
             color = '#69b3a2';
@@ -147,8 +154,20 @@
           return y(d.Income) - 10;
         })
         .text(function (d) {
-          if (d.Ethnicity === 'White' || d.Ethnicity === 'Black') {
-            return d.Ethnicity + ' ' + d.PercentDegree + '%, ' + d.Income + 'K';
+          if (
+            d.Ethnicity === 'White' ||
+            d.Ethnicity === 'Black' ||
+            d.Ethnicity === 'Indian' ||
+            d.Ethnicity === 'Asian Average' ||
+            d.Ethnicity === 'U.S. Average' ||
+            d.Ethnicity === 'Hispanic' ||
+            d.Ethnicity === 'Bhutanese' ||
+            d.Ethnicity === 'Nepali' ||
+            d.Ethnicity === 'Cambodian' ||
+            d.Ethnicity === 'Mongolian' ||
+            d.Ethnicity === 'Korean'
+          ) {
+            return d.Ethnicity;
           }
           if (d.Ethnicity === 'Bhutanese') {
             return d.Ethnicity + ' ' + d.PercentDegree + '%, ' + d.Income + 'K';
