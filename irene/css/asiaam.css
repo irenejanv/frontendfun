@@ -70,6 +70,10 @@ p {
   text-align: center;
 }
 
+.treechart800 {
+  width: 800px;
+}
+
 img {
   max-width: 800px;
 }
@@ -169,6 +173,20 @@ img {
 .tooltip {
   position: absolute;
 }
+
+.racetriangle {
+  max-width: 900px;
+}
+
+#show-tooltip-0,
+#show-tooltip-1,
+#show-tooltip-2 {
+  position: absolute;
+  z-index: 1;
+}
+
+/* #show-paragraph {
+} */
 
 /* CODE For Annual Income graphic  */
 /* .annual_income {
