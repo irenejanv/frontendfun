@@ -1,10 +1,18 @@
-// 0. Set things up so you can interact with circles.
-let circle_labels = document.getElementsByClassName('circle');
-let circle = Array.from(circle_labels);
+// // 0. Set things up so you can interact with circles.
+// let circle_labels = document.getElementsByClassName('circle');
+// let circle = Array.from(circle_labels);
 
-for (let i = 0; i < circle.length; i++) {
-  circles[i].addEventListener('mouseenter', showTooltip);
-  circles[i].addEventListener('mouseleave', hideTooltip);
+// for (let i = 0; i < circle.length; i++) {
+//   circles[i].addEventListener('mouseenter', showTooltip);
+//   circles[i].addEventListener('mouseleave', hideTooltip);
+// }
+
+let ids = ['Asian_Fam', 'BlackFam', 'WhiteFam'];
+for (let i = 0; i < ids.length; i++) {
+  let circle = document.getElementById(ids[i]);
+  circle.addEventListener('mouseenter', showTooltip);
+  circle.addEventListener('mouseleave', hideTooltip);
+  console.log(circle);
 }
 
 // 1. What happens when you mouse over the circles
@@ -14,26 +22,27 @@ function showTooltip() {
 
   let id = this.id;
   console.log(id);
-  let circle_number = id.split('-')[1];
-  // Show the box the picture is in:
-  document.getElementById('show-tooltip-' + circle_number).style.display =
-    'block';
-  document.getElementById(
-    'show-tooltip-' + circle_number
-  ).style.backgroundColor = 'white';
-  document.getElementById('show-tooltip-' + circle_number).style.width =
-    '150px';
-  document.getElementById('show-tooltip-' + circle_number).style.height =
-    '150px';
+
+  if (id == 'Asian_Fam') {
+    document.getElementById('show-tooltip-0').style.display = 'block';
+    document.getElementById('show-tooltip-0').style.marginLeft = '-100px';
+  } else if (id == 'WhiteFam') {
+    document.getElementById('show-tooltip-1').style.display = 'block';
+  } else if (id == 'BlackFam') {
+    document.getElementById('show-tooltip-2').style.display = 'block';
+  }
 }
 
 // 2. What happens when you mouse out of the circle
 function hideTooltip() {
   let id = this.id;
   console.log(id);
-  let circle_number = id.split('-')[1];
 
-  // Show the box the tooltip is in:
-  document.getElementById('show-tooltip-' + circle_number).style.display =
-    'none';
+  if (id == 'Asian_Fam') {
+    document.getElementById('show-tooltip-0').style.display = 'none';
+  } else if (id == 'WhiteFam') {
+    document.getElementById('show-tooltip-1').style.display = 'none';
+  } else if (id == 'BlackFam') {
+    document.getElementById('show-tooltip-2').style.display = 'none';
+  }
 }

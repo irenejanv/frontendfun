@@ -176,6 +176,7 @@ img {
 
 .racetriangle {
   max-width: 900px;
+  position: relative;
 }
 
 #show-tooltip-0,
@@ -183,6 +184,7 @@ img {
 #show-tooltip-2 {
   position: absolute;
   z-index: 1;
+  background-color: red;
 }
 
 /* #show-paragraph {
