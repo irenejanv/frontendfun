@@ -174,9 +174,22 @@ img {
   position: absolute;
 }
 
+.racetrianglegrid {
+  display: block;
+}
+
 .racetriangle {
-  max-width: 900px;
+  max-width: 75%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centersvg {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 #show-tooltip-0,
@@ -184,7 +197,11 @@ img {
 #show-tooltip-2 {
   position: absolute;
   z-index: 1;
-  background-color: red;
+  background-color: #69b3a2;
+  opacity: 90%;
+  color: white;
+  padding: 4%;
+  border-radius: 5px;
 }
 
 /* #show-paragraph {
