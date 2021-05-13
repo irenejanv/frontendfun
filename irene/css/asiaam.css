@@ -252,17 +252,16 @@ img {
 }
 
 .racetriangle {
-  max-width: 75%;
+  max-width: 60%;
   position: relative;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
 
 .centersvg {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  display: flex;
+  margin: auto;
 }
 
 #show-tooltip-0,
@@ -273,8 +272,13 @@ img {
   background-color: #69b3a2;
   opacity: 90%;
   color: white;
-  padding: 4%;
+  font-size: 13px;
+  padding: 2%;
   border-radius: 5px;
+bottom: 105%;
+
+  
+
 }
 
 .trianglebold {
