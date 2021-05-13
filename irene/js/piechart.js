@@ -69,7 +69,8 @@ function piechart() {
         return 'translate(' + arcGenerator.centroid(d) + ')';
       })
       .style('text-anchor', 'middle')
-      .style('font-size', 17);
+      .style('font-size', 14)
+       
 
     svg
       .append('text')
