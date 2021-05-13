@@ -70,6 +70,7 @@ function piechart() {
       })
       .style('text-anchor', 'middle')
       .style('font-size', 14)
+      .style('font-weight', 400)
        
 
     svg
