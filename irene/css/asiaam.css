@@ -291,11 +291,18 @@ width: 110%; }
 
 .sources {
   font-size: 12px;
+  padding-left: 60%;
+}
+
+.sources1{
+  font-size: 12px;
 }
 
 .sourcesgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+ 
 }
 
 /* observers css */
