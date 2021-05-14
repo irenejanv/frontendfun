@@ -25,7 +25,7 @@ function showTooltip() {
 
   if (id == 'Asian_Fam') {
     document.getElementById('show-tooltip-0').style.display = 'block';
-    document.getElementById('show-tooltip-0').style.marginLeft = '-100px';
+    // document.getElementById('show-tooltip-0').style.marginLeft = '-25%';
   } else if (id == 'WhiteFam') {
     document.getElementById('show-tooltip-1').style.display = 'block';
   } else if (id == 'BlackFam') {

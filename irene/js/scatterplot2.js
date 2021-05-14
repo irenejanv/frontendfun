@@ -30,6 +30,7 @@ function income_degrees() {
 
     svg
       .append('g')
+      .attr('class', 'xAxis')
       .attr('transform', 'translate(0,' + height + ')')
       .call(d3.axisBottom(x).tickSize(-height));
 
@@ -40,6 +41,9 @@ function income_degrees() {
 
     svg.selectAll('line').attr('stroke', 'white');
     svg.selectAll('path.domain').attr('stroke', 'white');
+    const xAxis = svg.selectAll('.xAxis');
+    const xAxisText = xAxis.selectAll('text');
+    xAxisText.attr('dy','15px');
 
     // get rid of extra 0 on y axis <text fill="#000" x="-3" dy="0.32em">0</text>
 
