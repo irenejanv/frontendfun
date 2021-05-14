@@ -109,7 +109,8 @@ function income_degrees() {
           d.Ethnicity === 'White' ||
           d.Ethnicity === 'Black' ||
           d.Ethnicity === 'Asian Average' ||
-          d.Ethnicity === 'U.S. Average'
+          d.Ethnicity === 'U.S. Average' ||
+          d.Ethnicity === 'Hispanic'
         ) {
           color = '#e24935';
         } else {
@@ -119,7 +120,7 @@ function income_degrees() {
       })
 
       // .style('fill', '#69b3a2')
-      .style('opacity', 0.3)
+      .style('opacity', 0.9)
       .style('stroke', 'white')
       .on('mouseover', mouseover)
       .on('mousemove', mousemove)
