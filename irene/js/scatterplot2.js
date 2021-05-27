@@ -44,6 +44,7 @@ function income_degrees() {
     const xAxis = svg.selectAll('.xAxis');
     const xAxisText = xAxis.selectAll('text');
     xAxisText.attr('dy','15px');
+    // when doing it for the y use negative (dx)
 
     // get rid of extra 0 on y axis <text fill="#000" x="-3" dy="0.32em">0</text>
 
