@@ -104,6 +104,41 @@ p {
   padding: 2%;
 }
 
+/* SAT bar charts */
+
+.bar_text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.bar_y_axis path.domain {
+  display: none;
+}
+.bar_y_axis line {
+  display: none;
+}
+.bar_y_axis_text {
+  fill: black;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* CODE For PIE CHART graphic  */
+.piechart_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.piechart_title {
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+/* end bar chart and pie chart multiples */
+
 /* treemap and scatterplot */
 .grid_contain_treescat {
   display: grid;
@@ -143,8 +178,6 @@ img {
 }
 
 .timeline_container {
-  /*   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
   justify-items: center;
   text-align: center;
 }
@@ -208,40 +241,6 @@ img {
 
 .black_white_description {
   max-width: 70%;
-}
-
-/* CODE FOR SAT BAR CHART EDITS HERE */
-
-.bar_text {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.bar_y_axis path.domain {
-  display: none;
-}
-.bar_y_axis line {
-  display: none;
-}
-.bar_y_axis_text {
-  fill: black;
-  font-size: 16px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 300;
-}
-
-/* CODE For PIE CHART graphic  */
-.piechart_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-}
-.piechart_title {
-  font-size: 16px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 300;
 }
 
 /* code for scatterplot graphic */
@@ -357,5 +356,40 @@ img {
   .scatplotMobile {
     display: block;
     margin: auto;
+  }
+
+  /* timeline adjust width */
+  .timeline_date {
+    background-color: #083837;
+    color: white;
+    font-size: 30px;
+    margin: auto;
+    width: 90%;
+    height: 115%;
+    padding-top: 1%;
+  }
+  .timeline_image {
+    max-width: 90%;
+    height: auto;
+    text-align: center;
+  }
+
+  .timeline_h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #083837;
+  }
+
+  .photocredit {
+    text-align: left;
+    padding-left: auto;
+    line-height: 0%;
+    font-size: 10px;
+  }
+
+  .timeline_text {
+    width: 90%;
+    margin: auto;
+    text-align: center;
   }
 }
