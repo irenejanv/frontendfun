@@ -1,7 +1,7 @@
 function satbar() {
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 30, bottom: 40, left: 130},
-    width = 400 - margin.left - margin.right,
+    width = 350 - margin.left - margin.right,
     height = 175 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
