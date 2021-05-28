@@ -52,6 +52,8 @@ body {
 .bodycolumn {
   padding-left: 15%;
   padding-right: 15%;
+  /* margin-left: 20%;
+  margin-right: 20%; */
 }
 
 .byline {
@@ -340,6 +342,11 @@ img {
 }
 
 @media (max-width: 430px) {
+  .bodycolumn {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .treechart800 {
     display: none;
   }
