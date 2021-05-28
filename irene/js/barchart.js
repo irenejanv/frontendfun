@@ -1,7 +1,7 @@
 function barChart(location, dataset) {
   // set the dimensions and margins of the graph
-  var margin = {top: 20, right: 30, bottom: 40, left: 130},
-    width = 450 - margin.left - margin.right,
+  var margin = {top: 20, right: 130, bottom: 40, left: 130},
+    width = 350 - margin.left - margin.right,
     height = 200 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
@@ -25,7 +25,8 @@ function barChart(location, dataset) {
           return d.Value;
         }),
       ])
-      .range([0, width]).nice();
+      .range([0, width])
+      .nice();
     // svg
     //   .append('g')
     //   .attr('transform', 'translate(0,' + height + ')')

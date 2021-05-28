@@ -9,7 +9,6 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  
 }
 
 h1 {
@@ -43,11 +42,9 @@ h1 {
   width: 40%;
 }
 
-
 .bodycolumn {
-  padding-left: 20%;
-  padding-right: 20%;
-  
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 h3 {
@@ -75,12 +72,11 @@ h4 {
   font-size: 20px;
 }
 .headermultiples {
-    line-height: 5px;
-    color: #C6A34F;
-    line-height: 5px;
-  }
-
+  line-height: 5px;
+  color: #c6a34f;
+  line-height: 5px;
 }
+
 p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -92,9 +88,7 @@ p {
 
 .pmultimples {
   padding-top: 0px;
-  
 }
-
 
 .grid_contain_multiples {
   display: grid;
@@ -117,21 +111,20 @@ p {
   row-gap: 70px;
 }
 
-
 .treescatsub {
   font-size: 20px;
-  color: #C6A34F;
+  color: #c6a34f;
 }
 
 .treechart800 {
   width: 720px;
+  /* max-width: 100%;
+  display: block; */
 }
 
 img {
   max-width: 800px;
 }
-
-
 
 .timeline_container {
   /*   grid-template-columns: 1fr;
@@ -159,7 +152,6 @@ img {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   color: #083837;
-
 }
 
 .photocredit {
@@ -204,10 +196,6 @@ img {
 
 /* CODE FOR SAT BAR CHART EDITS HERE */
 
-/* .sat_bar {
-  fill: #6bcfc5;
-} */
-
 .bar_text {
   font-size: 14px;
   font-weight: 400;
@@ -225,7 +213,6 @@ img {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
 }
-
 
 /* CODE For PIE CHART graphic  */
 .piechart_grid {
@@ -264,7 +251,8 @@ img {
 }
 
 .centersvg {
-width: 110%; }  
+  width: 110%;
+}
 
 #show-tooltip-0,
 #show-tooltip-1,
@@ -278,10 +266,7 @@ width: 110%; }
   padding: 2%;
   border-radius: 5px;
   width: 600px;
-/* bottom: 105%; */
-
-  
-
+  /* bottom: 105%; */
 }
 
 .trianglebold {
@@ -294,15 +279,13 @@ width: 110%; }
   padding-left: 60%;
 }
 
-.sources1{
+.sources1 {
   font-size: 12px;
 }
 
 .sourcesgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
- 
 }
 
 /* observers css */
@@ -314,4 +297,27 @@ width: 110%; }
 
 .fade-in.appear {
   opacity: 1;
+}
+
+@media (max-width: 1050px) {
+  .grid_contain_multiples {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    row-gap: 2%;
+  }
+  .multiples {
+    display: inline-block;
+    margin: auto;
+    padding: 2%;
+  }
+
+  .piechart_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }
