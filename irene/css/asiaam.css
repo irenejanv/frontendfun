@@ -341,5 +341,6 @@ img {
 
   .treechartMobile {
     display: block;
+    margin: auto;
   }
 }
