@@ -123,6 +123,10 @@ p {
   display: block;
 }
 
+.treechartMobile {
+  display: none;
+}
+
 .treescat2 {
   max-width: 100%;
   display: block;
@@ -331,4 +335,11 @@ img {
 }
 
 @media (max-width: 430px) {
+  .treechart800 {
+    display: none;
+  }
+
+  .treechartMobile {
+    display: block;
+  }
 }
