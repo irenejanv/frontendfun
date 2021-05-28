@@ -39,6 +39,7 @@ h1 {
 .asianheaderimg {
   width: 40%;
 }
+/* teal header end */
 
 /* start white body */
 
@@ -91,6 +92,8 @@ p {
   padding-top: 0px;
 }
 
+/* bar chart multiples and pie chart multiples */
+
 .grid_contain_multiples {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -98,11 +101,10 @@ p {
   column-gap: 5%;
 }
 .multiples {
-  /* background-color: #f6f0e0; */
   padding: 2%;
-  /* height: 200px; */
 }
 
+/* treemap and scatterplot */
 .grid_contain_treescat {
   display: grid;
   grid-template-columns: 1fr;
@@ -130,6 +132,10 @@ p {
 .treescat2 {
   max-width: 100%;
   display: block;
+}
+
+.scatplotMobile {
+  display: none;
 }
 
 img {
@@ -340,6 +346,15 @@ img {
   }
 
   .treechartMobile {
+    display: block;
+    margin: auto;
+  }
+
+  #income_degrees {
+    display: none;
+  }
+
+  .scatplotMobile {
     display: block;
     margin: auto;
   }
