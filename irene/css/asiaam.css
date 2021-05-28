@@ -2,13 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
 
-html {
+/* Teal header "Smart, Quiet, Hardworking" with Asian Fam SVG */
+.tealheader {
+  background-color: #083837;
+  color: white;
+  width: auto;
+  height: 800px;
+  display: flex;
 }
 
-body {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+.tealheaderchild {
+  margin: auto;
+  display: inline-block;
 }
 
 h1 {
@@ -23,13 +28,6 @@ h1 {
   margin-bottom: 5%;
 }
 
-.byline {
-  font-size: 16px;
-  font-weight: 300;
-  text-align: right;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 .subheader {
   font-weight: 600;
   font-size: 30px;
@@ -42,9 +40,24 @@ h1 {
   width: 40%;
 }
 
+/* start white body */
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
 .bodycolumn {
   padding-left: 15%;
   padding-right: 15%;
+}
+
+.byline {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: right;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h3 {
@@ -53,24 +66,12 @@ h3 {
   font-size: 25px;
 }
 
-.tealheader {
-  background-color: #083837;
-  color: white;
-  width: auto;
-  height: 800px;
-  display: flex;
-}
-
-.tealheaderchild {
-  margin: auto;
-  display: inline-block;
-}
-
 h4 {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0px;
   font-size: 20px;
 }
+
 .headermultiples {
   line-height: 5px;
   color: #c6a34f;
@@ -303,7 +304,7 @@ img {
   .grid_contain_multiples {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
+    grid-template-rows: 2fr;
     row-gap: 2%;
   }
   .multiples {
@@ -311,13 +312,54 @@ img {
     margin: auto;
     padding: 2%;
   }
-
-  .piechart_grid {
+  .grid_contain_multiples_pie {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 2%;
+  }
+
+  .multiples_pie {
     margin: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 430px) {
+  .tealheader {
+    background-color: #083837;
+    color: white;
+    width: 430px;
+    height: 5000px;
+    display: flex;
+  }
+
+  .tealheaderchild {
+    margin: auto;
+    display: inline-block;
+  }
+
+  h1 {
+    padding-left: 15px;
+    padding-bottom: 0px;
+    font-weight: 900;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 50px;
+    line-height: 37px;
+    color: #f6f0e0;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .subheader {
+    font-weight: 600;
+    font-size: 30px;
+    color: #f6f0e0;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .asianheaderimg {
+    width: 40%;
   }
 }
